@@ -39,4 +39,66 @@ Este é um projeto React para cadastro de usuários, conectado a um servidor Nod
 
 1. Clone este repositório:
    ```bash
-   git clone <URL_DO_REPOSITORIO>
+   git clone https://github.com/Gabriel-Alves-dev/cadastro-de-clientes
+   ```
+2. Acesse a pasta do projetoitório:
+   ```bash
+   cd cadastro-de-usuarios
+   ```
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
+4. Configure as variáveis de ambiente criando um arquivo .env na raiz do projeto. Exemplo:
+   ```plaintext
+   DATABASE_URL=mongodb+srv://<usuario>:<senha>@<cluster>.mongodb.net/<banco_de_dados>?retryWrites=true&w=majority
+   ```
+5. Execute o backend do projeto:
+   ```bash
+   node server.js /ou/ node --watch server.js
+   ```
+6. Inicie o frontend no modo de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+7. Acesse o projeto no navegador:
+   ```bash
+   http://localhost:5173
+   ```
+---
+
+## 🌐 Estrutura do Projeto
+
+### Frontend
+
+- src: Contém os componentes e páginas do aplicativo.
+- public: Arquivos estáticos.
+  
+### Backend
+- Servidor Node.js configurado para interagir com o MongoDB utilizando o Prisma.
+- Arquivo de configuração do Prisma (prisma/schema.prisma) para modelagem de dados.
+
+---
+
+##🗄️ Banco de Dados
+
+O projeto utiliza MongoDB como banco de dados principal, configurado para conexão via string URI. O Prisma é usado para gerenciar e consultar o banco de dados.
+
+### Configuração do Prisma
+
+O esquema do Prisma está definido no arquivo prisma/schema.prisma. Certifique-se de rodar as migrações, se necessário:
+   ```bash
+   npx prisma db push
+   ```
+
+---
+
+## 🤝 Contribuições
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request com melhorias.
+
+---
+
+## 📄 Licença
+
+Este projeto está sob a licença [MIT](LICENSE).
