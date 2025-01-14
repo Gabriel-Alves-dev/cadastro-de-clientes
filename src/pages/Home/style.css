@@ -1,0 +1,204 @@
+html {
+  height: 100%; 
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  flex-direction: column;
+  padding-top: 100px;
+  width: 100%; 
+  max-width: 100%; 
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #fff;
+  font-size: 28px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #2E2D4E;
+  width: 100%; 
+  max-width: 400px; 
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+form button {
+  border-radius: 30px;
+  background-color: #8B8AE1;
+  height: 40px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+  font-size: 14px;
+}
+
+form button:hover {
+  opacity: 0.8;
+}
+
+form input {
+  border: 1px solid #48456C;
+  border-radius: 30px;
+  height: 40px;
+  background-color: #363653;
+  color: #fff;
+  font-size: 16px;
+  padding-left: 10px;
+  outline: none;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  background-color: #2E2D4E;
+  margin: 10px;
+  padding: 10px;
+  width: 100%; 
+  max-width: 400px; 
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.card p {
+  color: #fff;
+  font-weight: bold;
+}
+
+.card p span {
+  font-weight: normal;
+}
+
+.card button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.card button:hover {
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-top: 50px;
+  }
+
+  form {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .card {
+    width: 90%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .container {
+    padding-top: 20px;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  .card {
+    width: 90%;
+    padding: 10px;
+  }
+}
+
+/* Overlay que escurece o fundo */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente escuro */
+  z-index: 99; /* Garante que o overlay fique sobre o conteúdo */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centraliza o conteúdo do dropdown */
+  opacity: 0;
+  animation: fadeIn 0.3s forwards; /* Animação para aparecer */
+}
+
+/* Animação para o overlay */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Estilo do menu de confirmação centralizado */
+.confirmation-menu {
+  background-color: #2E2D4E;
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 100; /* Garante que o menu fique acima do overlay */
+  transform: translateY(-50px); /* Inicia a animação fora da tela */
+  animation: slideDown 0.5s ease-out forwards; /* Animação para descer */
+}
+
+/* Animação de deslizamento do menu de confirmação */
+@keyframes slideDown {
+  0% {
+    transform: translateY(-50px); /* Começa fora da tela */
+  }
+  100% {
+    transform: translateY(0); /* Atinge sua posição final no centro */
+  }
+}
+
+.confirmation-menu span {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.confirmation-menu button {
+  border-radius: 5px;
+  background-color: #8B8AE1;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.confirmation-menu button:hover {
+  opacity: 0.8;
+}
+
+.confirmation-menu button:nth-child(2) {
+  background-color: #E94E77; /* Cor diferente para o "Não" */
+}
+
+.confirmation-menu button:nth-child(2):hover {
+  opacity: 0.8;
+}
