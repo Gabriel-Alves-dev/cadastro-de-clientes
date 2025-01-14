@@ -1,6 +1,9 @@
 # Cadastro de Usuários
 
-Este é um projeto React para cadastro de usuários, conectado a um servidor Node.js com banco de dados **MongoDB** utilizando **Prisma** como ORM. O projeto é configurado para ser executado com **Vite** e utiliza bibliotecas modernas para gerenciar a interface e interagir com APIs.
+Este é um projeto React, compativel com Desktop e mobile, para cadastro de usuários, conectado a um servidor Node.js com banco de dados **MongoDB** utilizando **Prisma** como ORM. O projeto é configurado para ser executado com **Vite** e utiliza bibliotecas modernas para gerenciar a interface e interagir com APIs.
+
+## Demonstativo:
+![Design sem nome](https://github.com/user-attachments/assets/83a02802-2fd5-4ef1-9f8b-bcd147e4ac0b)
 
 ---
 
